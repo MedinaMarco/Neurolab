@@ -40,13 +40,14 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-from src.pages.acto1 import render as render_acto1
-from src.pages.acto2 import render as render_acto2
-from src.pages.acto3 import render as render_acto3
-from src.pages.acto4 import render as render_acto4
-from src.pages.acto5 import render as render_acto5
-from src.pages.acto6 import render as render_acto6
-from src.pages.glosario import render as render_glosario, render_glosario_sidebar
+from src.pages.acto1      import render as render_acto1
+from src.pages.acto2      import render as render_acto2
+from src.pages.acto3      import render as render_acto3
+from src.pages.acto4      import render as render_acto4
+from src.pages.acto5      import render as render_acto5
+from src.pages.acto6      import render as render_acto6
+from src.pages.glosario   import render as render_glosario, render_glosario_sidebar
+from src.pages.matematica import render as render_matematica
 
 DESCRIPTIONS = {
     "acto1":    "Intentás separar datos con una línea. Descubrís por qué no siempre alcanza.",
@@ -55,6 +56,7 @@ DESCRIPTIONS = {
     "acto4":    "Mirás cómo la red mide y corrige sus errores con backpropagation.",
     "acto5":    "Visualizás la frontera de decisión evolucionando epoch a epoch.",
     "acto6":    "Controlás todos los parámetros y entrenás tu propia red.",
+    "matematica": "Notacion matricial, derivadas, backprop completo, inicializacion y gradient descent.",
     "glosario": "Todos los conceptos clave explicados con analogías y fórmulas.",
 }
 
@@ -66,12 +68,14 @@ PAGES = {
     "📉  Acto 4 — El Error y Backprop":    "acto4",
     "🗺️  Acto 5 — La Frontera":           "acto5",
     "🎮  Acto 6 — Tu Turno":              "acto6",
+    "📐  Fundamento Matematico":        "matematica",
     "📖  Glosario Completo":              "glosario",
 }
 
 RENDER_FNS = {
     "acto1": render_acto1, "acto2": render_acto2, "acto3": render_acto3,
     "acto4": render_acto4, "acto5": render_acto5, "acto6": render_acto6,
+    "matematica": render_matematica,
     "glosario": render_glosario,
 }
 
@@ -102,7 +106,8 @@ def render_inicio():
         ("acto3", "🕸️", "La Red",              "#10B981"),
         ("acto4", "📉", "El Error y Backprop", "#F59E0B"),
         ("acto5", "🗺️", "La Frontera",         "#7C3AED"),
-        ("acto6", "🎮", "Tu Turno",            "#A78BFA"),
+        ("acto6",     "🎮", "Tu Turno",               "#A78BFA"),
+        ("matematica","📐", "Fundamento Matematico",  "#06B6D4"),
     ]
     for i, (acto_id, emoji, titulo, color) in enumerate(actos_info):
         with cols[i % 3]:
