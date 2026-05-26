@@ -7,13 +7,12 @@ hasta entender cómo una red neuronal multicapa (MLP) aprende mediante backpropa
 
 ## 👥 Integrantes
 
-| Nombre | Rol |
-|--------|-----|
-| Integrante A | Especialista en el modelo (MLP, activaciones, pérdidas) |
-| Integrante B | Especialista en visualización (Plotly, Matplotlib) |
-| Integrante C | Arquitecto de la app + Storytelling (Streamlit, narrativa, glosario) |
+Integrantes del proyecto: Nicolas Mesquiatti, Cristian Monzon y Marco Medina
+Github de cada integrante: 
+Nicolas Mesquiatti: https://github.com/Nicolas-Mesquiatti
+Cristian Monzon: https://github.com/VynCrey
+Marco Medina: https://github.com/MedinaMarco
 
-**Modelo elegido:** Opción B — MLP con backpropagation
 
 ---
 
@@ -24,8 +23,8 @@ hasta entender cómo una red neuronal multicapa (MLP) aprende mediante backpropa
 - pip
 
 ### Pasos
-
-```bash
+```
+bash
 # 1. Clonar el repositorio
 git clone <url-del-repo>
 cd neurolab
@@ -42,7 +41,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-La aplicación abre automáticamente en `http://localhost:8501`
+
 
 ---
 
